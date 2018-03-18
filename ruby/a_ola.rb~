@@ -1,0 +1,10 @@
+# 	print 'Hello world'
+#   puts "Hello world"
+
+#  	var # variavel local
+#	@var  1 #variavel instancia
+#	$var = true # variavel global
+
+STDOUT.puts 'Qual o seu nome?'
+nome = STDIN.gets
+puts 'Hello ' + nome
