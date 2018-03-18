@@ -4,11 +4,10 @@ Dado("que o usuário informou os seguintes dados:") do |table|
   end
   
   Quando("eu faço uma solicitação POST para o serviço user") do
-   HTTparty.post (
+   @result = HTTparty.post(
        'http://marktasks.herokuapp.com/api/user',
-       headers: {Content-Type => 'application/json'}
-       body:@user.to_json
-   )
+       headers: { 'Content-Type' => 'application/json'},
+       body: @user.to_json)
   end
   
   Então("o código de resposta HTTP deve ser igual a {string}") do |status_code|
